@@ -31,18 +31,19 @@ if cpuinfo.find('Allwinner') >0 :
    print('C.H.I.P GPIO')
    isCHIP=True
    import CHIP_IO.GPIO as MGPIO
+#   MGPIO.toggle_debug()
    MGPIO.cleanup()
    #CLK GPIO
-   PIC_CLK = 'LCD-D15'
+   PIC_CLK = 'I2C-SCL'
 
    #DATA GPIO 
-   PIC_DATA = 'LCD-D19'
+   PIC_DATA = 'I2C-SDA'
 
    #MCLR GPIO
-   PIC_MCLR = 'LCD-D21'
+   PIC_MCLR = 'UART1-RX'
 
    #PGM
-   PIC_PGM = 'LCD-D23'
+   PIC_PGM = 'UART1-TX'
 
 else:
    #  ------ Raspberry Pi --
